@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "d059abcf-b016-41a0-ad8d-2a460cac2598",
+		"name": "OlaClick Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "691363"
+	},
+	"item": [
+		{
+			"name": "GET Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b05bf18e70585c6f37c34cf758ad777b",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Order By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b05bf18e70585c6f37c34cf758ad777b",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b05bf18e70585c6f37c34cf758ad777b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientName\": \"Ana López\",\r\n    \"items\": [\r\n        {\r\n            \"description\": \"Ceviche\",\r\n            \"quantity\": 2,\r\n            \"unitPrice\": 50\r\n        },\r\n        {\r\n            \"description\": \"Chicha morada\",\r\n            \"quantity\": 1,\r\n            \"unitPrice\": 10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Advance Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b05bf18e70585c6f37c34cf758ad777b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/orders/1/advance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1",
+						"advance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
