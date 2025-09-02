@@ -17,18 +17,20 @@ docker-compose up --build
 ```
 This will start the API on port 3000, Postgres and Redis.
 
-## Migrations
-The project uses `sequelize-cli`. Inside the container run:
-```bash
-npx sequelize db:migrate
-npx sequelize db:seed:all
-```
-
 ## Endpoints
 - `GET /orders` - list orders (not delivered). Cached 30s.
 - `POST /orders` - create new order.
 - `POST /orders/:id/advance` - advance order state (initiated → sent → delivered). When delivered, the order is removed.
 - `GET /orders/:id` - get order detail.
+
+## ⚡ Testing
+
+This project uses **Jest** as the testing framework.
+
+### Run all tests
+```bash
+npm run test run test
+```
 
 ## 🧪 Preguntas adicionales
 
